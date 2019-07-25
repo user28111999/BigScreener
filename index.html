@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title>BigScreener</title>
+        <link
+            href="./assets/css/materialdesignicons.min.css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link type="text/css" rel="stylesheet" href="./assets/css/main.css"/>
+    </head>
+    <body>
+        <noscript>
+            JavaScript must be enabled to execute this app
+        </noscript>
+        
+        <div id="app"></div>
+
+        <script>
+            process.env.UV_THREADPOOL_SIZE = 128;
+            process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+            process.env.NODE_ENV = 'production';
+
+            require('./dist/main');
+        </script>
+    </body>
+</html>
