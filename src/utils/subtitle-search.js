@@ -13,7 +13,12 @@ let SubtitleSearch = function () {
         }
     }
 
-    let langs = ['English', 'French', 'Spanish', 'Italian', 'German'];
+    let langs = [
+        'English', 
+        'French', 
+        'Chinese', 
+        'Russian'
+    ];
 
     let getSubsFromElements = (html) => {
         let $ = cheerio.load(html);

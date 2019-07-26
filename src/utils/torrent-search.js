@@ -1,3 +1,5 @@
+import ProxyList from "../models/proxy-list";
+
 let TorrentSearch = function () {
     let axios = require("axios"),
         cheerio = require("cheerio"),
@@ -13,20 +15,23 @@ let TorrentSearch = function () {
             queryFunction: (query) => {
                 return `${encodeURI(query)}&video=on&category=0&page=0&orderby=99`;
             }
-        }, {
+        }, 
+        {
             name: "YTS",
             url: "https://yts.lt/movie/",
             queryFunction: (query) => {
                 return query.replace(/[^A-Za-z0-9]/g, '-');
             }
-        }, {
+        }, 
+        {
             name: "EZTV",
             url: "https://eztv.yt/search/",
             forShows: true,
             queryFunction: (query) => {
                 return encodeURI(query);
             }
-        }, {
+        }, 
+        {
             name: "1337x",
             url: "https://www.1377x.to/search/",
             queryFunction: (query) => {
@@ -35,18 +40,34 @@ let TorrentSearch = function () {
         }
     ];
 
+    let getProxy = () => {
+        let proxyList = new ProxyList();
+        return proxyList
+            .listProxies()
+            .then((proxies) => {
+                if (proxies) {
+                    let proxy = proxies[Math.floor(Math.random() * proxies.length)];
+                    return proxy;
+                } else {
+                    reject();
+                }
+            });
+    };
+
     let searchProvider = (url) => {
         return new Promise((resolve, reject) => {
-            request
-            .get(url)
-            .then((response) => {
-                let body = response.data;
-                    handleTorrents(body).then((torrents) => {
-                    resolve(torrents);
-                });
-            })
-            .catch((err) => resolve(err));
-        }).catch((err) => resolve(err));
+            getProxy().then((proxy) => {
+                request
+                    .get(url, {proxy})
+                    .then((response) => {
+                        let body = response.data;
+                        handleTorrents(body).then((torrents) => {
+                            resolve(torrents);
+                        });
+                    })
+                    .catch((err) => resolve(err));
+            }).catch((err) => resolve(err));
+        }).catch((err) => console.log(err));
     };
 
     let getMagnetData = (magnet) => {
@@ -91,7 +112,7 @@ let TorrentSearch = function () {
     };
 
     let searchTorrents = (query, show) => {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             let searchPromises = [];
             for (let j = 0; j < providers.length; j++) {
                 let provider = providers[j];

@@ -324,7 +324,8 @@ class Player extends Component {
                         active={isActive}
                         setActiveSubtitle={this.setActiveSubtitle}
                         setSubtitleData={this.setSubtitleData}
-                        item={item}/>
+                        item={item}
+                    />
                 })
             : '';
 

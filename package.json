@@ -1,6 +1,6 @@
 {
     "name": "bigscreener",
-    "version": "1.0.0",
+    "version": "1.3.0",
     "private": true,
     "description": "A free and high quality streaming service using WebTorrent",
     "license": "UNLICENSED",
@@ -70,6 +70,7 @@
         "react-transition-group": "^1.2.1",
         "torrent-search-api": "^2.0.8",
         "uniqid": "^4.1.1",
+        "utf8": "^3.0.0",
         "webtorrent": "^0.103.1",
         "webtorrent-health": "^1.1.2"
     },
