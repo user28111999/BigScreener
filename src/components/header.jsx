@@ -146,7 +146,7 @@ class Header extends Component {
                         className={`quality ${this.props.quality == "HD"
                         ? "hd-active"
                         : "full-active"}`}>
-                        <span>HQ</span>
+                        <span>LQ</span>
                         <div className='quality-control-container'>
                             <input
                                 readOnly
