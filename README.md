@@ -11,6 +11,8 @@
         
 A free and high quality streaming service using WebTorrent, watch anything, anywhere, whenever you want.
 
+Projet libre fait par Alan, Tanguy H et Blaise Matuidi
+
 <br>
 
 <img src="https://i.imgur.com/EmKhsy0.jpg" alt="BigScreener Beta">  
