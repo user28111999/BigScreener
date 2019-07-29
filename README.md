@@ -11,7 +11,7 @@
         
 A free and high quality streaming service using WebTorrent, watch anything, anywhere, whenever you want.
 
-Projet libre fait par Alan, Tanguy H et Blaise Matuidi
+<i>Projet libre fait par Alan S et Tanguy H.</i>
 
 <br>
 
