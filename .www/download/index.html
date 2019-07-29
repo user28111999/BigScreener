@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137701622-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+			gtag('config', 'UA-137701622-1');
+		</script>
+		
+		<!-- Regular data -->
+		<meta charset="utf-8">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="black">
+		<meta name="msapplication-navbutton-color" content="black">
+		<meta name="theme-color" content="#000000">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="msapplication-TileColor" content="#000000">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Description -->
+		<meta name="author" content="BigScreener" />
+		<meta name="description"
+			content="A free, anonymous and high quality streaming service using torrents" 
+		/>
+		<meta name="keywords"
+			content="streaming,open-source,torrents" 
+		/>
+		<meta name="Resource-type" content="Document" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Open Graph data -->
+		<meta property="og:site_name" content="BigScreener" />
+		<meta property="og:title" content="BigScreener" />
+		<meta property="og:description"
+			content="free, anonymous and high quality streaming service using torrents" 
+		/>
+		<meta property="og:image" content="https://yunseok.dev/img/thumb.png" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://yunseok.dev/bigscreener" />
+
+		<!-- Title -->
+		<title>Download | BigScreener</title>
+		
+		<!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                font-size: 64px;
+                top: 24%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            a, a:hover {
+                text-decoration: none;
+                color: white;
+            }
+
+            i {
+                padding: 12px;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+            }
+
+            i:hover {
+                color: #ff3838;
+            }
+
+            .disabled {
+                opacity: 0.2;
+                pointer-events: none;
+            }
+        </style>
+	</head>
+	<body>
+        <div class="container">
+            <hr>
+            <a href="https://github.com/yunseok/BigScreener/releases/download/v1.3-beta/bigscreener-v1.3-beta-win32-installer.exe" title="Download for Windows">
+                <i class="fa fa-windows"></i>
+            </a>
+            <a class="disabled">
+                <i class="fa fa-apple"></i>
+            </a>
+            <a href="https://github.com/yunseok/BigScreener/releases/download/v1.3-beta/bigscreener-v1.3-beta-amd64-installer.deb" title="Download for Linux">
+                <i class="fa fa-linux"></i>
+            </a>
+            <hr>
+        </div>
+	</body>
+</html>
