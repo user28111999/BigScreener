@@ -46,19 +46,19 @@ Whether the prebuilt binary can run on a distribution depends on whether the dis
 
 ## Hardware Requirements
 
-## Windows
+### Windows
 
 - An Intel Pentium 4 processor or later that's SSE2 capable
 - 512 MB of RAM
 - 1Go of storage 
 
-## Mac
+### Mac
 
 - An Intel processor that's 64-bit
 - 512 MB of RAM
 - 1Go of storage
 
-## Linux
+### Linux
 
 - An Intel Pentium 4 processor or later that's SSE2 capable
 - 1Go of storage
