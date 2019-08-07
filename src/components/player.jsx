@@ -257,6 +257,10 @@ class Player extends Component {
         this.videoElement.current.innerHTML = '';
     }
 
+    chromecast = host => {
+        
+    }
+
     shouldComponentUpdate(nextProps, nextState) {
         if (nextProps.readyToClose === this.props.readyToClose && nextProps.downloadPercent === this.props.downloadPercent && nextProps.downloadSpeed === this.props.downloadSpeed && nextProps.openBackup === this.props.openBackup && nextProps.movie === this.props.movie && nextState.showOverlay === this.state.showOverlay && nextProps.paused === this.props.paused && nextProps.videoIndex === this.props.videoIndex && nextProps.time === this.props.time && nextProps.loading === this.props.loading && nextProps.playerStatus.status === this.props.playerStatus.status && nextProps.seekValue === this.props.seekValue && nextProps.currentTime === this.props.currentTime && nextState.videoBuffering === this.state.videoBuffering && nextProps.startTime === this.props.startTime && nextProps.fileLoaded === this.props.fileLoaded && nextProps.subtitleOptions === this.props.subtitleOptions && nextState.subtitleData === this.state.subtitleData && nextState.activeSubtitle === this.state.activeSubtitle && nextState.showSubtitles === this.state.showSubtitles) {
             return false;

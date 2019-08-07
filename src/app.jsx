@@ -413,7 +413,7 @@ class App extends Component {
                 this
                     .setPlayerStatus(message
                     ? message
-                    : "Data saved succesfully!", load
+                    : "Goodbye!", load
                     ? load
                     : false)
                     .then(() => {
@@ -709,11 +709,20 @@ class App extends Component {
     };
 
     startStreaming = () => {
+        const arr = [
+            "Done!",
+            "It's okay to cry...",
+            "4 bit 9d api+e+6 [126.26]",
+            "Don't forget to talk the entire time",
+            "Don't forget to get a tub of popcorn and cut a hole in the bottom...",
+            "Make the first move!"
+        ]
+
         this.setStreaming(true);
         clearTimeout(this.streamTimeout);
         this.setPlayerLoading(false);
         this
-            .setPlayerStatus(`Done!`)
+            .setPlayerStatus(arr[Math.floor(Math.random()*arr.length)].toString())
             .then(() => {
                 this.setPlayerStatus(false);
             });

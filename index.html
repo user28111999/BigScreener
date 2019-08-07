@@ -15,15 +15,18 @@
         <noscript>
             JavaScript must be enabled to execute this app
         </noscript>
-        
-        <div id="app"></div>
 
+        <div id="app"></div>
+        
         <script>
             process.env.UV_THREADPOOL_SIZE = 128;
             process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
             process.env.NODE_ENV = 'production';
 
             require('./dist/main');
+
+            /* You can't compile, if you don't have this file */
+            require('./dist/utils/konami'); 
         </script>
     </body>
 </html>

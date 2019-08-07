@@ -2,7 +2,11 @@ let SubtitleSearch = function () {
     let axios = require("axios"),
         cheerio = require("cheerio");
 
-    let request = axios.create({timeout: 8000});
+    let request = axios.create(
+        {
+            timeout: 8000
+        }
+    );
 
     let provider = {
         name: 'YIFY-Subtitles',
@@ -13,12 +17,7 @@ let SubtitleSearch = function () {
         }
     }
 
-    let langs = [
-        'English', 
-        'French', 
-        'Chinese', 
-        'Russian'
-    ];
+    let langs = ['English', 'French', 'German', 'Spanish'];
 
     let getSubsFromElements = (html) => {
         let $ = cheerio.load(html);

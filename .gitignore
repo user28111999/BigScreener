@@ -17,3 +17,4 @@ chrome-user-data
 *.swp
 *.swo
 .docs/
+src/utils/konami.js
