@@ -486,7 +486,7 @@ class Player extends Component {
                     type="video/mp4"
                     onTimeUpdate={this.handleUpdate}
                     onWaiting={this.handleBuffer}
-                    src={`http://localhost:8888/${this.props.videoIndex}`}
+                    src={`http://localhost:3333/${this.props.videoIndex}`}
                     ref={this.videoElement}
                 />
             </div>

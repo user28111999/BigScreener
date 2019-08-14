@@ -27,7 +27,7 @@ You can download the latest version [here](https://github.com/yunseok/BigScreene
 
 - Windows 7 or later
 - 512 MB of RAM
-- 1Go of storage 
+- 1Go of storage
 
 ### Mac OS & Linux
 

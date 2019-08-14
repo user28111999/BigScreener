@@ -16,9 +16,6 @@ class Menu extends Component {
                     name: 'Movies',
                     icon: 'filmstrip'
                 }, {
-                    name: 'TV Shows',
-					icon: 'youtube-tv'
-                }, {
                     name: 'Collection',
                     icon: 'library'
                 }, {

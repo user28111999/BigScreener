@@ -996,7 +996,7 @@ class App extends Component {
                     this.server = torrent.createServer();
                     this
                         .server
-                        .listen("8888");
+                        .listen("3333");
 
                     this
                         .fetchFirstPieces(torrent, file)
