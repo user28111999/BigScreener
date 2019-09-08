@@ -6,6 +6,9 @@
 <a href="https://yunseok.dev/BigScreener" target="_blank">
   <img src="https://img.shields.io/github/license/yunseok/BigScreener.svg">
 </a>
+<a href="http://discord.gg/vaFqy9g" target="_blank">
+  <img src="https://img.shields.io/discord/581070588291055616>
+</a>
     
 <hr>
         
