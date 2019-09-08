@@ -797,9 +797,7 @@ class App extends Component {
         let langs = require('langs');
 
         let language = franc(text);
-        let lang = language ? langs
-            .where("3", language)
-            .name : '';
+        let lang = language ? langs.where('3', language).name : '';
 
         return lang;
     }
@@ -860,7 +858,7 @@ class App extends Component {
                     let newFile = {
                         ...fileClone,
                         language,
-                        src,
+                        src
                     }
 
                     newFile.name = (newFile.name ? newFile.name : newFile.path) + language;
@@ -878,7 +876,7 @@ class App extends Component {
 
         for (let i = 0; i < arrayOfSubtitles.length; i++) {
             let fileObject = arrayOfSubtitles[i];
-            if(sanitized.indexOf(fileObject.path) === -1){
+            if (sanitized.indexOf(fileObject.path) === -1) {
                 let promise = this.getFileComplete(fileObject);
                 promises.push(promise);
                 sanitized.push(fileObject.path);
@@ -1031,8 +1029,11 @@ class App extends Component {
 
         results = results.filter((movie) => {
             let releaseDate = movie.release_date;
-            let year = Number(releaseDate.substring(0, 4));
-            let month = Number(releaseDate.substring(6, 7));
+
+            if (releaseDate) {
+                let year = Number(releaseDate.substring(0, 4));
+                let month = Number(releaseDate.substring(6, 7));
+            }
 
             let currentDate = new Date();
             currentDate = {
@@ -1626,11 +1627,12 @@ class App extends Component {
 
     getFeatured = () => {
         let url = `https://api.themoviedb.org/3/discover/movie?api_key=${
+        
         this
             .state
-            .apiKey}&region=US&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_date.gte=${this
-            .getURLDate(10, true)}&primary_release_date.lte=${this
-            .getURLDate(1, true)}`;
+            .apiKey}&region=US&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&release_date.lte=${this
+            .getURLDate(1)}`;
+        
         return new Promise((resolve, reject) => {
             this
                 .fetchContent(url)
@@ -2357,6 +2359,7 @@ class App extends Component {
 
         let fullGenreContainer = this.state.showGenre
             ? (<Genre
+                getURLDate={this.getURLDate}
                 extractMovies={this.extractMovies}
                 genreInfo={this.state.genreInfo}
                 favorites={this.state.favorites}

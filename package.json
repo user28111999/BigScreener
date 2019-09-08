@@ -1,6 +1,6 @@
 {
     "name": "bigscreener",
-    "version": "1.5.0",
+    "version": "1.6.2",
     "private": true,
     "description": "A free and high quality streaming service using WebTorrent",
     "license": "UNLICENSED",
